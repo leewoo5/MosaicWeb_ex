@@ -1,9 +1,9 @@
 1. Spring Starter Project 생성
-	-name: MosaicWeb
-	-Type: Gradle(buildShip)
-	-Packaging: war
-	-Language: Java
-	-Artifact: MosaicWeb
+	- name: MosaicWeb
+	- Type: Gradle(buildShip)
+	- Packaging: war
+	- Language: Java
+	- Artifact: MosaicWeb
 
 2. 형상관리 
 	- Remote Repository 생성(github.com)
