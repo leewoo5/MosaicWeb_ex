@@ -29,8 +29,12 @@
 		- >> Eclipse Gradle Import(클론한 폴더를 그래들프로젝트로..) 
 	
 	
-	
-	
+3. HTML
+	- 설정 불필요
+	- mkdir src/main/webapp 폴더생성
+	- notepad src/main/webapp/Hello.html
+	- gradle bootrun
+	- firefox ==> http://localhost:8080/Hello.html
 	
 	
 	
