@@ -36,6 +36,15 @@
 	- gradle bootrun
 	- firefox ==> http://localhost:8080/Hello.html
 	
+4. JSP
+	- mvnrepository.com -> search&download : Tomcat embed jasper
+	- build.gradle: dependency : 
+		compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.3'
+	- notepad src/main/webapp/Hello.jsp
+	- gradle bootrun
+	- firefox => http://localhost:8080/Hello.jsp
+	-
+	
 	
 	
 	
