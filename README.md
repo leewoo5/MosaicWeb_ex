@@ -4,6 +4,7 @@
 	- Packaging: war
 	- Language: Java
 	- Artifact: MosaicWeb
+	-프로젝트를 다 만들었으면 엔코딩해라.
 
 2. 형상관리 
 	- Remote Repository 생성(github.com)
