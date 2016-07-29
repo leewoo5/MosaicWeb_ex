@@ -37,7 +37,7 @@ public class HelloServlet extends HttpServlet {
         out.println("<br>");
         out.println("remoteAddr= " + request.getRemoteAddr());
         for (int i = 0; i < 10; i++) {
-        	out.println("<h1>HelloServlet</h1>");
+        	out.println("<h1>HelloServlet</h1> " + i);
         }
         out.println("</body>");
         out.println("</html>");
