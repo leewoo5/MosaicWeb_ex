@@ -57,10 +57,29 @@
 6. SpringLoaded(서블릿 리로드 기능)
 	- mvnrepository.com -> search&download : SpringLoaded
 	- build.gradle에 설정(두 군데)
-		classpath("org.springframework:springloaded:version:1.2.6.RELEASE")
+		classpath("org.springframework:springloaded:1.2.6.RELEASE")
 		compile group: 'org.springframework', name: 'springloaded', version: '1.2.6.RELEASE'
 	- eclipse Output directory 변경
 		bin ==> build/classes/main
+
+7. Mybatis 설정
+	- mvnrepository.com -> search : spring boot mybatis => Mybatis Spring Boot Starter
+	- build.gradle에 설정
+		compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.1.1'
+		compile files('src/main/webapp/WEB-INF/lib/ojdbc7.jar')
+	- application.properties
+		spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+		spring.datasource.url=jdbc:oracle:thin:@52.78.80.137:1521:orcl
+		spring.datasource.username=scott
+		spring.datasource.password=tiger
+	- eclipse Gradle => gradle project refresh 수행
+	- gradle bootrun
+	
+	
+	- 생성 src/main/java/com/hybrid/mapper/DeptMapper.java 인터페이스 생성
+	- 생성 src/main/java/com/hybrid/dao/DeptDao.java 다오 생성
+		
+	
 	 
 	
 	
