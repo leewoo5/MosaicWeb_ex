@@ -78,6 +78,7 @@
 	
 	- 생성 src/main/java/com/hybrid/mapper/DeptMapper.java 인터페이스 생성
 	- 생성 src/main/java/com/hybrid/dao/DeptDao.java 다오 생성
+	- 생성 src/main/java/com/hybrid/domain/Dept.java 모델 생성
 		
 	
 	 
