@@ -37,7 +37,7 @@ public class PrimaryController {
     @FXML private TextField url;
 
     @FXML private WebView myWeb;
-    
+    WebEngine engine;
     
     @FXML
     private ResourceBundle resources;
@@ -52,13 +52,19 @@ public class PrimaryController {
         
         String homeAdress = "http://localhost:8080/Index.html";
         url.setText("http://localhost:8080/Index.html");
+        
+        engine = myWeb.getEngine();
+        engine.load(homeAdress);
+        
         url.setOnAction(e->{
-        	WebEngine engine = myWeb.getEngine();
-        	engine.load(homeAdress);
+        	engine = myWeb.getEngine();
+        	engine.load(url.getText());
+        	url.setText(engine.getLocation());
+        	
         });
         home.setOnAction(e-> {
         	url.setText(homeAdress);
-        	WebEngine engine = myWeb.getEngine();
+        	engine = myWeb.getEngine();
         	engine.load(homeAdress);
         });
         

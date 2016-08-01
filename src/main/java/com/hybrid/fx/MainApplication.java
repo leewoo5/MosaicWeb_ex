@@ -35,8 +35,11 @@ public class MainApplication extends ParticleApplication {
 			
 			@Override
 			public void run() {
-
-		        getPrimaryStage().setOnCloseRequest(new EventHandler<WindowEvent>() {
+				System.out.println("######################");
+				System.out.println("Platform.runLater(...)");
+				System.out.println("######################");
+		       
+				getPrimaryStage().setOnCloseRequest(new EventHandler<WindowEvent>() {
 					
 					@Override
 					public void handle(WindowEvent event) {
@@ -51,7 +54,13 @@ public class MainApplication extends ParticleApplication {
     }
     public static ConfigurableApplicationContext ctx;
     public static void main(String[] args) {
+    	/*
+    	 * Spring Boot Start
+    	 */
     	ctx = SpringApplication.run(MosaicWebApplication.class, args);
+    	/*
+		 * Gluon Start
+		 */
     	launch(args);
     }
   

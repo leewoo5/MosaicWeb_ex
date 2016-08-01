@@ -81,7 +81,7 @@
 	- 생성 src/test/java/com/hybrid/mapper/DeptTest.java
 	- 생성 src/main//webapp/dept.jsp 모델 생성
 
-8.deploy 방법
+8.deploy(배포) 방법
 	- gradle war
 	- build/libs/MosaicWeb~~.war
 	- cp MosaicWeb.war =>> C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps 이동

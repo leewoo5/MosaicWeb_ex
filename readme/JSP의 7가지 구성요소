@@ -1,0 +1,24 @@
+JSP의 7가지 요소
+
+1. 지시어
+	-page
+	-taglib
+	-include
+	
+2. 스크립트
+	-scriptlet = 자바 실행문
+	-expression = 자바 출력문
+	-decralation = 자바 선언문
+	
+3. 기본객체
+	1) request 
+	2) response
+	3) session
+	4) application
+	5) pageContext
+	6) out
+	7) config
+	8) page(this)
+	9) exception -> isErrorPage=true
+	
+4. ㅁㅊ샤ㅐㅜㅅㅁㅎ
