@@ -18,13 +18,26 @@ public class EmbeddedTomcatConfig implements EmbeddedServletContainerCustomizer 
 			
 			@Override
 			public void customize(Context context) {
+				
+				/*
+				 * welcomeFile
+				 * html은 자동으로 index파일이 불러와지지만 jsp는 등록해줘야 한다.
+				 */
+				context.addWelcomeFile("index.jsp");
+				
+				
+				
 				ErrorPage error404page = new ErrorPage();
 				
 				error404page.setErrorCode(404);
 				error404page.setLocation("/WEB-INF/error/404.jsp");
+//				context.addErrorPage(error404page);
 				
-				context.addErrorPage(error404page);
-				 
+				ErrorPage errorArithmeticPage = new ErrorPage();
+				
+				errorArithmeticPage.setExceptionType("java.lang.ArithmeticException");
+				errorArithmeticPage.setLocation("/WEB-INF/error/arithmetic.jsp");
+//				context.addErrorPage(errorArithmeticPage);
 			}
 		});
 	}

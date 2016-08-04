@@ -4,6 +4,8 @@ import com.gluonhq.particle.application.ParticleApplication;
 import com.gluonhq.particle.state.StateManager;
 import com.gluonhq.particle.view.ViewManager;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,6 +15,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 import javax.inject.Inject;
+
 import org.controlsfx.control.action.Action;
 import org.controlsfx.control.action.ActionMap;
 import org.controlsfx.control.action.ActionProxy;
@@ -49,17 +52,15 @@ public class PrimaryController {
         actionSignin =  ActionMap.action("signin");
         
         button.setOnAction(e -> viewManager.switchView("secondary"));
-        
-        String homeAdress = "http://localhost:8080/Index.html";
-        url.setText("http://localhost:8080/Index.html");
-        
+
+        String homeAdress = "http://localhost:8080/index.jsp";
         engine = myWeb.getEngine();
         engine.load(homeAdress);
+        url.setText(engine.getLocation());
         
         url.setOnAction(e->{
         	engine = myWeb.getEngine();
         	engine.load(url.getText());
-        	url.setText(engine.getLocation());
         	
         });
         home.setOnAction(e-> {

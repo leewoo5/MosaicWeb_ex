@@ -96,6 +96,38 @@
 		->> spring boot + gluon Stop
 		->> primaryView에 WebView 추가 
 		
+10. sitemesh
+	- mvnrepository.com -> search : sitemesh => sitemesh Library 
+	- build.gradle dependencies에 추가
+		->>compile group: 'org.sitemesh', name: 'sitemesh', version: '3.0.1'
+	- SitemeshFilterConfig클래스를 작성
+		=>builder.addDecoratorPath("/deco", "/WEB-INF/deco/maindeco.jsp");
+
+11. Spring Security 설정
+	- mvnrepository.com -> search : spring boot security starter  version=1.3.6
+	- mvnrepository.com -> search : spring security taglibs version=4.0.4
+	-build.gradle dependency 추가
+		=>compile('org.springframework.boot:spring-boot-starter-security')
+		  compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '4.0.4.RELEASE'
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	 
 	
 	

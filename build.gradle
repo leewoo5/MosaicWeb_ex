@@ -20,7 +20,7 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 /*
- * application 설정
+ * 7. application 설정
  */
 apply plugin: 'application'
 
@@ -36,7 +36,7 @@ targetCompatibility = 1.8
 repositories {
 	mavenCentral()
 	/*
-		 * Gluon 저장소 설정
+		 * 8. Gluon 저장소 설정
 		 */
 		jcenter()
     	maven {
@@ -69,10 +69,19 @@ dependencies {
 	 */	
 	compile files('src/main/webapp/WEB-INF/lib/ojdbc7.jar')
 	/*
-	 * 5. Gluon 설정
+	 * 6. Gluon 설정
 	 */	
 	compile 'com.gluonhq:particle:1.1.0'
-	
+	/*
+	 * 9. sitemesh
+	 */
+	compile group: 'org.sitemesh', name: 'sitemesh', version: '3.0.1'
+	 
+	/*
+	 * 9. spring security
+	 */
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '4.0.4.RELEASE'
 	 
 }
 

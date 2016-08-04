@@ -13,8 +13,24 @@
 </head>
 <body>
 <h1>Dept Test</h1>
-
 <%
+	Cookie[] cookies = request.getCookies();
+	boolean loginStatus = false;
+	
+	if(cookies != null)	
+	for(Cookie c : cookies){
+		String cname = c.getName();
+		String cvalue = c.getValue();
+		if(cname.equals("LOGIN")&&cvalue.equals("success")){
+			loginStatus = true;
+		}
+	}
+	
+	if(loginStatus!=true){
+		response.sendRedirect("/cookie/loginForm.jsp");
+		return;
+	}
+	
 	ApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
 	DeptMapper mapper = ctx.getBean(DeptMapper.class);
 	mapper.delete(67);
@@ -26,5 +42,6 @@
 	}
 
 %>
+<a href="logout.jsp">로그아웃</a>
 </body>
 </html>
